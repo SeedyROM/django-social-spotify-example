@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'social_django',
+    'core',
     'info',
 ]
 
@@ -137,3 +139,12 @@ STATIC_URL = '/static/'
 
 SOCIAL_AUTH_SPOTIFY_KEY = os.getenv('SPOTIFY_CLIENT_ID')
 SOCIAL_AUTH_SPOTIFY_SECRET = os.getenv('SPOTIFY_CLIENT_SECRET')
+SOCIAL_AUTH_SPOTIFY_SCOPE = [
+    'user-top-read',
+    'user-library-read',
+    'user-read-recently-played',
+]
+
+# Auth settings
+LOGIN_REDIRECT_URL = 'index'
+LOGOUT_REDIRECT_URL = 'index'
