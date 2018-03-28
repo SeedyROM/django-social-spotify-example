@@ -12,7 +12,7 @@
   * 2 Views to display how it works.
   * Super simple!
 
-## Installtion Instructions:
+## Installation Instructions:
 
 * Create a .env file in the root project directory and include your spotify keys.
   * Follow the .env.example template for more information.
