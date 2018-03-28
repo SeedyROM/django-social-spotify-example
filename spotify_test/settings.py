@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 
-# Load our .env
+# TODO: REMOVE ME
+# Load our .env file and load the ENV variables.
 from dotenv import load_dotenv
 load_dotenv()
 
