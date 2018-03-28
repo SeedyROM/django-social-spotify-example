@@ -5,14 +5,16 @@ from django.shortcuts import render
 from core.decorators import spotify_view
 
 
+# Stupid simple view to render login.
 def index(request):
   return render(request, 'info/index.html')
 
 
+# Example spotify view using requests to send API calls.
 @spotify_view
 def test(request, token):
   resp = requests.get(
-    'https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=3',
+    'https://api.spotify.com/v1/me/top/tracks',
     headers={
       'Accept': 'application/json',
       'Content-Type': 'application/json',
@@ -22,6 +24,5 @@ def test(request, token):
   resp.raise_for_status()
 
   return JsonResponse({
-    'token': token,
     'data': resp.json()
   })
