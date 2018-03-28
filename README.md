@@ -3,6 +3,7 @@
 ## Files of interest:
 * `spotify_test/settings.py`
   * This is where most of the configation has occured, copy this if need be.
+  * All `TODO: *` blocks are places where the initial configuration has been altered! Search for them with your favorite text editors.
 * `spotify_test/urls.py`
   * Where we create our OAuth callback urls and some test routes.
 * `core/decorators.py`
